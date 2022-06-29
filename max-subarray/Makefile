@@ -1,4 +1,3 @@
-SHELL=/bin/bash
 CXX=clang
 CC=$(CXX)
 LDFLAGS= -lstdc++
