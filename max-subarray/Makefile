@@ -1,18 +1,15 @@
 SHELL=/bin/bash
 CXX=clang
+CC=$(CXX)
 LDFLAGS= -lstdc++
 
-OBJECTS = main.o
-SOURCES = main.cc
+SOURCES = $(wildcard *.cc)
 
-PROGRAMS = max-subarray
+PROGRAMS = main
 
 CXXFLAGS=-W -Wall
 
 all:	$(PROGRAMS)
-
-max-subarray:	$(OBJECTS)
-	$(CXX) $(LDFLAGS) -o $@ $(OBJECTS)
 
 clean::
 	rm $(PROGRAMS) *.o
