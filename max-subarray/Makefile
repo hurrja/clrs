@@ -10,7 +10,7 @@ CXXFLAGS=-W -Wall
 
 all:	$(PROGRAMS)
 
-clean::
+clean:
 	rm $(PROGRAMS) *.o
 
 depend:
