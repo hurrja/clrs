@@ -1,18 +1,10 @@
-//***************************************************************************/
-//
-// main.C
-//
-// Created 2022 by 
-//
-//***************************************************************************/
-
 #include <cstdlib>
 #include <tuple>
 #include <iostream>
 
 using namespace std;
 
-tuple<int,int,int> maxSubarray (int A[], int size)
+tuple<int, int, int> maxSubarray (int A [], int size)
 {
     int sum, from, to; // max sum subarray found so far
     int sumToI, fromToI;  // max sum subarray ending at index i
@@ -52,7 +44,7 @@ tuple<int,int,int> maxSubarray (int A[], int size)
     return make_tuple (sum, from, to);
 }
 
-int main (int argc, char* argv[])
+int main (int, char**)
 {
     const int N = 16;
     int A [N] = {13, -3, -25, 20, -3, -16, -23, 18, 20, -7, 12, -5, -22, 15, -4, 7};
