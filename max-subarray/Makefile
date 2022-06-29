@@ -1,4 +1,4 @@
-CXX=clang
+CXX=clang++
 CC=$(CXX)
 LDFLAGS= -lstdc++
 
