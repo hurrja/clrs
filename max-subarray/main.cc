@@ -1,15 +1,16 @@
 #include <cstdlib>
 #include <tuple>
 #include <iostream>
+#include <type_traits>
 
 using namespace std;
 
-tuple<int, int, int> maxSubarray (int A [], int size)
+tuple<int, int, int> maxSubarray (const int A [], size_t size)
 {
     int sum, from, to; // max sum subarray found so far
     int sumToI, fromToI;  // max sum subarray ending at index i
     
-    for (int i = 0; i < size; i++)
+    for (size_t i = 0; i < size; i++)
     {
         int elem = A [i];
         if (i == 0) // first element, initialize values
@@ -46,8 +47,8 @@ tuple<int, int, int> maxSubarray (int A [], int size)
 
 int main (int, char**)
 {
-    const int N = 16;
-    int A [N] = {13, -3, -25, 20, -3, -16, -23, 18, 20, -7, 12, -5, -22, 15, -4, 7};
+    const int A [] = {13, -3, -25, 20, -3, -16, -23, 18, 20, -7, 12, -5, -22, 15, -4, 7};
+    const size_t N = extent<decltype(A)>::value;
 
     int sum, from, to;
     tie (sum, from, to) = maxSubarray (A, N);
