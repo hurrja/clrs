@@ -3,7 +3,7 @@ CXX=clang
 LDFLAGS= -lstdc++
 
 OBJECTS = main.o
-SOURCES = main.C
+SOURCES = main.cc
 
 PROGRAMS = max-subarray
 
