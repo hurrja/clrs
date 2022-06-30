@@ -5,12 +5,16 @@
 
 using namespace std;
 
-tuple <int, int, int> maxSubarray (const int A [], size_t size)
+template <class T>
+tuple <int, int, int> maxSubarray (const int A [], T size)
 {
+    // playing with type traits here
+    static_assert (is_integral <T>::value, "requires integral size type");
+
     int sum, from, to; // max sum subarray found so far
     int sumToI, fromToI;  // max sum subarray ending at index i
     
-    for (size_t i = 0; i < size; i++)
+    for (T i = 0; i < size; i++)
     {
         auto elem = A [i];
         if (i == 0) // first element, initialize values
