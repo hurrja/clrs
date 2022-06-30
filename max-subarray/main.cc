@@ -12,7 +12,7 @@ tuple <int, int, int> maxSubarray (const int A [], size_t size)
     
     for (size_t i = 0; i < size; i++)
     {
-        int elem = A [i];
+        auto elem = A [i];
         if (i == 0) // first element, initialize values
         {
             sum = elem;
