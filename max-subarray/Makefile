@@ -1,12 +1,11 @@
 CXX=clang++
 CC=$(CXX)
-LDFLAGS= -lstdc++
+LDFLAGS=
+CXXFLAGS=-W -Wall
 
 SOURCES = $(wildcard *.cc)
 
 PROGRAMS = main
-
-CXXFLAGS=-W -Wall
 
 all:	$(PROGRAMS)
 
