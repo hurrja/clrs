@@ -1,7 +1,7 @@
 CXX=clang++
 CC=$(CXX)
 LDFLAGS=
-CXXFLAGS=-W -Wall
+CXXFLAGS=-Wall -Wextra
 
 SOURCES = $(wildcard *.cc)
 
