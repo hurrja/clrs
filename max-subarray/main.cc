@@ -6,7 +6,7 @@
 using namespace std;
 
 template <class T>
-tuple <int, int, int> maxSubarray (const int A [], T size)
+tuple <int, int, int> maxSubarray (const int A [], const T size)
 {
     // playing with type traits here
     static_assert (is_integral <T>::value, "requires integral size type");
@@ -49,10 +49,10 @@ tuple <int, int, int> maxSubarray (const int A [], T size)
     return make_tuple (sum, from, to);
 }
 
-int main (int, char**)
+int main ()
 {
     const int A [] = {13, -3, -25, 20, -3, -16, -23, 18, 20, -7, 12, -5, -22, 15, -4, 7};
-    const auto N = extent <decltype (A)>::value;
+    const auto N = extent <decltype (A)>::value; // size of array declared above
 
     int sum, from, to;
     tie (sum, from, to) = maxSubarray (A, N);
