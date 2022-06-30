@@ -48,7 +48,7 @@ tuple <int, int, int> maxSubarray (const int A [], size_t size)
 int main (int, char**)
 {
     const int A [] = {13, -3, -25, 20, -3, -16, -23, 18, 20, -7, 12, -5, -22, 15, -4, 7};
-    const size_t N = extent <decltype (A)>::value;
+    const auto N = extent <decltype (A)>::value;
 
     int sum, from, to;
     tie (sum, from, to) = maxSubarray (A, N);
